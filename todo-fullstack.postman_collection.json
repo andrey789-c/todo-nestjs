@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "242e14d6-4690-4579-bb60-921db4fe1855",
+		"name": "todo-fullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21304772"
+	},
+	"item": [
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "Get categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJIZWxsbzEiLCJpYXQiOjE3NDAwNTU4MzcsImV4cCI6MTc0MDA1OTQzN30.l2i4HwI-rvnXLzDT6IskUQtOa-f0BIKl-q5nzTgS9_Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{SERVER}}/category?",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"category"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJIZWxsbzEiLCJpYXQiOjE3NDAwNTU4MzcsImV4cCI6MTc0MDA1OTQzN30.l2i4HwI-rvnXLzDT6IskUQtOa-f0BIKl-q5nzTgS9_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Уборка\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/category",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "auth",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"Hello1\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SERVER}}/auth/register",
+							"host": [
+								"{{SERVER}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Todo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJIZWxsbzEiLCJpYXQiOjE3NDAwNTU4MzcsImV4cCI6MTc0MDA1OTQzN30.l2i4HwI-rvnXLzDT6IskUQtOa-f0BIKl-q5nzTgS9_Q",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{SERVER}}/todos",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/todos/1/category",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"todos",
+						"1",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJIZWxsbzEiLCJpYXQiOjE3NDAwNTU4MzcsImV4cCI6MTc0MDA1OTQzN30.l2i4HwI-rvnXLzDT6IskUQtOa-f0BIKl-q5nzTgS9_Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Помыть посуду\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{SERVER}}/todos",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Complete Service",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{SERVER}}/todos/1/complete",
+					"host": [
+						"{{SERVER}}"
+					],
+					"path": [
+						"todos",
+						"1",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
